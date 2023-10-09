@@ -1,0 +1,22 @@
+server:
+  port: 8060
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: blu-customer-service
+          uri: lb://blu-customer-service
+          predicates:
+            - Path=/customers/**
+        - id: blu-invoice-service
+          uri: lb://blu-invoice-service
+          predicates:
+            - Path=/invoices/**
+management:
+  tracing:
+    sampling:
+      probability: 1.0
