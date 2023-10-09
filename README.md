@@ -1,3 +1,3 @@
 # springboot-microservices-example
 
-# Use Java 17
+Use Java 17
