@@ -1,0 +1,48 @@
+info:
+  app:
+    name: zucodu-user-service
+    version: '0.1'
+    grailsVersion: 6.0.1-SNAPSHOT
+spring:
+  application:
+    name: zucodu-user-service
+grails:
+  mime:
+    disable:
+      accept:
+        header:
+          userAgents:
+          - Gecko
+          - WebKit
+          - Presto
+          - Trident
+    types:
+      json:
+      - application/json
+      - text/json
+      hal:
+      - application/hal+json
+      - application/hal+xml
+      xml:
+      - text/xml
+      - application/xml
+      atom: application/atom+xml
+      css: text/css
+      csv: text/csv
+      js: text/javascript
+      rss: application/rss+xml
+      text: text/plain
+      all: '*/*'
+  gorm:
+    reactor:
+      events: false
+  views:
+    default:
+      codec: html
+hibernate:
+  hbm2ddl:
+    auto: update
+  cache:
+    queries: false
+    use_second_level_cache: false
+    use_query_cache: false
